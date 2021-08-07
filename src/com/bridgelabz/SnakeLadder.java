@@ -20,7 +20,10 @@ public class SnakeLadder {
                     break;
                 case LADDER:
                     System.out.println("Ladder");
+                    if((WINNING_POSITION-rollDice)>=playerPosition)
                     playerPosition += rollDice;
+                    else
+                        System.out.println("Exact dice value required to win a game");
                     break;
                 case SNAKE:
                     System.out.println("Snake");
