@@ -8,11 +8,12 @@ public class SnakeLadder {
         System.out.println("Welcome to the Snake and Ladder Game");
         //variables
         int playerPosition = 0;
+        int numberOfrollDice = 0;
         while  (playerPosition < WINNING_POSITION)
         {
             int rollDice = (int) (Math.floor(Math.random() * 10) % 6 + 1);
             System.out.println("Player rolled dice value : " + rollDice);
-
+            numberOfrollDice+=1;
             int Option = (int) (Math.floor(Math.random() * 10) % 3);
             switch (Option) {
                 case NO_PLAY:
@@ -36,6 +37,6 @@ public class SnakeLadder {
             System.out.println("The Player Position Is : " + playerPosition);
         }
         System.out.println( "Player  Wins  The  Game" );
-
+        System.out.println("Player rolled the dice "+numberOfrollDice+" times to winning the game");
     }
 }
